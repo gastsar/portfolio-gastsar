@@ -1,0 +1,45 @@
+.footer {
+  margin-top: 2rem;
+  padding: 20px;
+
+  &__contact {
+    @include d-flex($justify: space-between );
+
+    &__media {
+      & ul {
+        padding: 5px 0;
+        @include d-flex($direction: row);
+        & li {
+          list-style: none;
+        }
+      }
+    }
+  }
+
+  &__copy {
+    text-align: center;
+    font-size: 12px;
+
+    & blockquote {
+      font-style: italic;
+    }
+
+    & p {
+      padding-top: 1rem;
+      color: $secondary;
+    }
+  }
+
+  /* Add the following styles to create the full-width line */
+  position: relative; /* Establish a stacking context */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0; /* Align the line to the left edge */
+    right: 0; /* Align the line to the right edge */
+    bottom: 190px; /* Place the line at the bottom of the footer */
+    height: 1px; /* Set the line height */
+    background-color: grey; /* Set the line color */
+    z-index: -1; /* Place the line behind the footer content */
+  }
+}

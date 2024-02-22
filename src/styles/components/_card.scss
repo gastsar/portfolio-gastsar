@@ -1,0 +1,55 @@
+.cardSkill{
+
+    border: 1px solid #ABB2BF42;
+    width: 250px;
+  
+
+&__title{
+    padding: 5px ;
+}
+    &__list{
+        @include d-flex($direction: row);
+        border-top:  1px solid #ABB2BF42;
+        color: $secondary;
+       gap: 10px;
+       li{ 
+        padding: 5px 0;
+       }
+    }
+}
+
+
+.cardTag {
+    border: 1px solid #ABB2BF42;
+    width: fit-content;
+    padding: 8px;
+    color: $secondary;
+    gap: 10px;
+    position: relative;
+
+    overflow: hidden;
+    color: $secondary;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -80px;
+        bottom: 0;
+        left: 0;
+        border-right: 50px solid   $primary;
+        border-bottom: 80px solid #00000041;
+        transform: translateX(-110%);
+        transition: transform 1s ease; /* Ajout de la propriété de transition */
+   
+    }
+
+    &:hover {
+        color: $light;
+        cursor: pointer;
+
+        &:before {
+            transform: translateX(0);
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.descript {
+  &__contente {
+    max-width:50% ;
+    &__texte {
+      color: $secondary;
+    }
+  }
+}
+.skills {
+  &__contente {
+    @include d-flex($direction: row, $justify: center);
+    gap: 10px;
+  }
+}
+.softSkills {
+  &__contente {
+    ul{
+     @include d-flex( $justify: flex-start);
+     gap: 10px;
+    }
+  }
+}
+.kiff{
+  &__contente {
+    ul{
+    @include d-flex($direction: row, $justify: flex-start);
+    gap: 10px;
+    }
+ 
+  }
+}
