@@ -1,0 +1,33 @@
+.image-container {
+    position: relative;
+    width: 200px; /* Ajustez la largeur selon vos besoins */
+    height: 200px; /* Ajustez la hauteur selon vos besoins */
+  }
+  
+  .rotate {
+    cursor: pointer;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s ease;
+  }
+  
+  .profil:hover {
+    transform: rotateY(180deg);
+  }
+  
+  .profil {
+    border-radius: 50%; /* Pour rendre l'image circulaire */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease; /* Animation de la transparence */
+    pointer-events: none; /* Empêche l'interaction avec l'image superposée */
+    opacity: 0; /* Initialement invisible */
+  }
+  
+  .image-container:hover .profil {
+    opacity: 1; /* Au survol de .image-container, affiche l'image .profil */
+  }
+  

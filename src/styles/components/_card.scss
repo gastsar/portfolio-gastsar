@@ -1,8 +1,11 @@
 .cardSkill{
 
     border: 1px solid #ABB2BF42;
-    width: 250px;
-  
+    min-width: 250px;
+  cursor: pointer;
+  scroll-snap-align: start;
+  background: transparent;
+  backdrop-filter: blur(15px);
 
 &__title{
     padding: 5px ;
@@ -26,7 +29,8 @@
     color: $secondary;
     gap: 10px;
     position: relative;
-
+    background: transparent;
+    backdrop-filter: blur(15px);
     overflow: hidden;
     color: $secondary;
 
@@ -52,4 +56,63 @@
             transform: translateX(0);
         }
     }
+}
+
+
+
+
+.project{
+    @include d-flex($direction: row);
+    gap: 2rem;
+
+    @include small-device {
+        flex-direction: column;
+    }
+   
+}
+.cardProject {
+    border: 1px solid #ABB2BF42;
+    cursor: pointer;
+    width: 22%;
+    scroll-snap-align: start;
+    background: transparent;
+    backdrop-filter: blur(15px);
+
+    &__header {
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+
+            :hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    @include small-device {
+       width: 100%;
+    }
+   
+}
+.cardProject__content{
+    padding: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+  
+}
+.cardProject__footer{
+     text-align: start;
+   a{
+   
+       text-decoration: none;
+       color: $secondary;
+       border: 1px solid $secondary;
+       padding: 2px 5px;
+       margin: 2px;
+       &:hover{
+           background: $primary;
+           color: $light;
+       }
+   }
 }

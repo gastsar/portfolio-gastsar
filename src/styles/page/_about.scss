@@ -1,23 +1,57 @@
 .descript {
   &__contente {
-    max-width:50% ;
+    max-width:65% ;
     &__texte {
       color: $secondary;
+    }
+    @include small-device {
+      max-width: 100%;
     }
   }
 }
 .skills {
   &__contente {
-    @include d-flex($direction: row, $justify: center);
-    gap: 10px;
+
+    @include d-flex( $justify: space-evenly, $wrap:nowrap );
+    gap: 1.5rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar{
+height: 0.5em;
+    }
+    &::-webkit-scrollbar-track{
+      background:$light;
+      border-radius: 40em;
+    }
+    &::-webkit-scrollbar-thumb{
+      border-radius: 40em;
+      background: $primary;
+    }
   }
+
 }
 .softSkills {
   &__contente {
     ul{
-     @include d-flex( $justify: flex-start);
+     @include d-flex( $justify: flex-start );
      gap: 10px;
+     height: 10em;
+    overflow-y: scroll;
+    scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar{
+      width: 0.5em;
+          }
+          &::-webkit-scrollbar-track{
+            background:$light;
+            border-radius: 40em;
+          }
+          &::-webkit-scrollbar-thumb{
+            border-radius: 40em;
+            background: $primary;
+          }
     }
+
   }
 }
 .kiff{
@@ -25,6 +59,20 @@
     ul{
     @include d-flex($direction: row, $justify: flex-start);
     gap: 10px;
+      height: 5em;
+    overflow-y: scroll;
+    scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar{
+      width: 0.5em;
+          }
+          &::-webkit-scrollbar-track{
+            background:$light;
+            border-radius: 40em;
+          }
+          &::-webkit-scrollbar-thumb{
+            border-radius: 40em;
+            background: $primary;
+          }
     }
  
   }

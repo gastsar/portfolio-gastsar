@@ -3,7 +3,8 @@
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer__contact">
+      <div className="footer__container">
+         <div className="footer__contact">
       
           <p>yvesnarsonkevine@gmail.com</p>
      
@@ -16,12 +17,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer__copy">
-      <blockquote>
-            <p>"Seul on va plus vite, ensemble on va plus loin... Mais parfois, on se perd en chemin."</p><br /> 
-            <span> - Proverbe africain -</span> 
-        </blockquote>
-        <p >&copy;Copyright 2024, Made by Yves. Tous droits réservés.</p>
+        <p >&copy;Copyright 2024, by Kevine_dev. Tous droits réservés.</p>
       </div>
+      </div>
+     
     </footer>
   )
 }

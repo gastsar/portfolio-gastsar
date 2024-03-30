@@ -1,6 +1,12 @@
 .footer {
-  margin-top: 2rem;
-  padding: 20px;
+
+  padding: 20px 0;
+
+  &__container {
+   width: $width-content;
+   margin: auto;
+
+  }
 
   &__contact {
     @include d-flex($justify: space-between );

@@ -1,4 +1,6 @@
-import { CardSkill, CardTag } from '../../components/Cards'
+import AboutContent from '../../components/AboutContent'
+import CardSkill from '../../components/Cards/CardSkill'
+import { CardTag } from '../../components/Cards/CardTag'
 import { Subtitle, Title } from '../../components/Utils/Title'
 import { data } from '../../data/data'
 
@@ -7,21 +9,10 @@ const About = () => {
 
   return (
     <main> 
-        <Title title="Qui suis-je?" />
-      <section className="descript">
        
-        <article className="descript__contente">
-          <p className="descript__texte">
-            Bonjour, je suis Kevine, développeur front-end junior passionné.
-            J'apprends depuis plus d'un an ! Je suis en constante formation et
-            mon parcours est encore en construction. Mais ma détermination à
-            maîtriser les technologies web et à créer des expériences web
-            captivantes est inébranlable. Je suis à la recherche d'un projet
-            porteur de sens où je m'épanouirai et apprendrai encore. Si vous
-            recherchez un développeur front-end junior motivé, n'hésitez pas à
-            me contacter !
-          </p>
-        </article>
+      <section className="descript">
+        <Title title="Qui suis-je?" />
+         <AboutContent/>
       </section>
       <section className="skills">
         <Subtitle subtitle="Mes competences" />
@@ -51,6 +42,7 @@ const About = () => {
           </ul>
         </article>
       </section>
+    
     </main>
   )
 }

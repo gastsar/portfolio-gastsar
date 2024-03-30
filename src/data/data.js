@@ -1,20 +1,18 @@
 export const data = {
   texte: [
-    'Je suis en formation continue',
-    'Je suis originaire de Madagascar',
-    'Je suis passionné de mangas',
-    "Ma série préférée est 'The Blacklist'",
-    'Mon rêve est de voyager à travers le monde',
-    "J'aspire à découvrir de nouvelles cultures",
+    'En formation',
+    'Originaire de Madagascar',
+    'Passionné de mangas',
+    "Série préférée 'The Blacklist'",
+    'Rêve  de voyager à travers le monde',
+    "Aspire à découvrir de nouvelles cultures",
   ],
   skills: {
-    Langages: ['Javascript', 'Php'],
-    Autres: ['HTML', 'CSS', 'JEST', 'REST'],
-    Outils: ['VSCode', 'Figma', 'Git', 'Github', 'Postman'],
-    Databases: ['MySql', 'Sql', 'Mongo'],
-    Frameworks: ['React', 'Boostrap'],
-    Preprocesseurs: ['sass'],
-    Collaboration: ['Slack', 'Discord', 'Notion'],
+    langages: ['Javascript', 'HTML', 'CSS'],
+    frameworks: ['React'],
+    outils: ['Jest', 'Git', 'Bootstrap', 'SQL', 'Sass'],
+    environnements: ['VSCode', 'Figma', 'Github', 'Postman'],
+    collaboration: ['Slack', 'Discord', 'Notion']
   },
   softSkills: [
     "S'adapter rapidement aux nouveaux environnements et situations de travail.",
@@ -25,7 +23,80 @@ export const data = {
     'Agir avec respect et éthique dans ses missions et interactions professionnelles.',
     'Gérer son temps et ses priorités de manière efficace.',
   ],
-  project: {
-    Portfolio : []
-  }
-}
+  project: [
+    {
+      name: "Gameone",
+      status: "En cours de développement",
+      technologies: ["React"],
+      description: "site web de mon portfolio.",
+      image: "./projectImage/gameone.png",
+      github: "lien_vers_github",
+     
+    },
+    {
+      name: "Ohmyfood",
+      status: "En cours de développement",
+      technologies: ["React"],
+      description: "site web de mon portfolio.",
+      image: "./projectImage/ohmyfood.png",
+      github: "lien_vers_github",
+     
+    },
+    {
+      name: "Bokii",
+      status: "En cours de développement",
+      technologies: ["React"],
+      description: "site web de mon portfolio.",
+      image: "./projectImage/bokii.png",
+      github: "lien_vers_github",
+     
+    },
+    {
+      name: "SportSee",
+      status: "En cours de développement",
+      technologies: ["React", "Express"],
+      description: "Site web de salle de sport",
+      image: "./projectImage/sportsee.png",
+      github: "lien_vers_github",
+     
+    },
+    {
+      name: "Fishye",
+      status: "En cours de développement",
+      technologies: ["React", "Express"],
+      description: "Site web de gestion de banque.",
+      image: "./projectImage/fishye.png",
+      github: "lien_vers_github",
+    
+    },
+    {
+      name: "E-Blog",
+      status: "En cours de développement",
+      technologies: ["React"],
+      description: "Site web de gestion de stockage d'espace.",
+      image: "./projectImage/blog.png",
+      github: "lien_vers_github",
+     
+    },
+
+    {
+      name: "Petitplat",
+      status: "En cours de développement",
+      technologies: ["React"],
+      description: "Site web de gestion de stockage d'espace.",
+      image: "./projectImage/petitplat.png",
+      github: "lien_vers_github",
+     
+    },
+    {
+      name: "Kasa",
+      status: "En cours de développement",
+      technologies: ["React"],
+      description: "Site web de gestion de location de logements.",
+      image: "./projectImage/kasa.png",
+      github: "lien_vers_github",
+    
+    }
+  ]
+  
+};

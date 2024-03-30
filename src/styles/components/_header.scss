@@ -1,68 +1,106 @@
-.nav{
-    position: sticky;
-    top: 0;
-    background-color: $dark;
-    @include d-flex($justify: space-between);
-    padding: 20px 0;
-    &__link{
-        @include d-flex($justify: space-between);
-        gap: 20px;
-       & li{
-            list-style: none;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 20;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  border-radius: 0 0 15px 15px;
+  padding: 20px 0;
+  width: $width-content;
+  @include d-flex($justify: space-between);
 
-            a{
-                text-decoration: none;
-            color: $secondary;   
-            & .title__index{
-                font-size: medium;
-               
-            } 
-            & .title{
-                font-size: medium;
-                margin: 0;
-            } 
-             
-            } 
-            .active{
-                color: $light;
-                font-weight: 600;
-            }
-            
+  &__link {
+    @include d-flex($justify: space-between);
+    gap: 20px;
+    & li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: $secondary;
+        & .title__index {
+          font-size: medium;
         }
+        & .title {
+          font-size: medium;
+          margin: 0;
+        }
+      }
+      .active {
+        color: $light;
+        font-weight: 600;
+      }
     }
+    @include small-device {
+      display: none;
+    }
+
+  }
+  @include small-device {
+    &::before{
+      content: "";
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      width:20px;
+      height: 20px;
+      background: rgba(197, 15, 15, 0.5);
+      z-index: 10;
+      border-radius: 50%;
+    }
+  }
 }
 
 
-.logo {
-    position: relative; 
-  cursor: pointer;
-    &::before {
-      content: "•";
-      position: absolute;
-      left: -39px; /* Positionnement initial du point à gauche */
-      top: -47px; /* Positionnement initial du point en haut */
-      font-size: 5.5rem;
-      color: $primary;
-      transition: left 0.5s ease-in-out; /* Définir une transition fluide */
-    }
-  
-    &:hover::before {
 
-      left: 160px; /* Définir la position finale du point à droite */
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0; /* Définir la position de départ de la ligne à gauche */
-        bottom: 0; /* Définir la position de départ de la ligne en bas */
-        width: 0; /* Largeur initiale de la ligne */
-        height: 2px; /* Hauteur de la ligne */
-        background-color: $primary; /* Couleur de la ligne */
-        transition: width 0.5s ease-in-out; /* Définir une transition fluide */
-      }
-    
-      &:hover::after {
-        width: 100%; /* Largeur finale de la ligne */
-      }
+.logo {
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: '•';
+    position: absolute;
+    left: -39px; 
+    top: -47px;
+    font-size: 5.5rem;
+    color: $primary;
+    transition: left 0.5s ease-in-out;
   }
-  
+
+  &:hover::before {
+    left: 160px; 
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0; 
+    bottom: 0; 
+    width: 0;
+    height: 2px;
+    background-color: $primary; 
+    transition: width 0.5s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%; 
+  }
+}
+
+.select {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: $secondary;
+}
+.option {
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+}
+.select .option:hover {
+  background-color: #f0f0f0;
+}

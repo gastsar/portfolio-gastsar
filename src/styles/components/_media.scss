@@ -1,0 +1,24 @@
+.media{
+    position: absolute;
+    left: 1.5rem;
+    top: 21rem;
+    
+    li{
+        transition: transform 0.5s ease; ;
+        &:hover{
+        transform: scale(1.4);
+        transition: transform 0.5s ease; }
+    }
+   
+}
+
+.media::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    bottom: 0;
+    top: -21rem;
+    width: 2px;
+    height: 21rem;
+    background-color: $primary;
+}
